@@ -32,6 +32,7 @@
     "prism-themes": "^1.5.0",
     "prismjs": "^1.22.0",
     "rxjs": "^6.6.3",
+    "skywalking-client-js": "^0.3.0",
     "zone.js": "^0.11.3"
   },
   "devDependencies": {
