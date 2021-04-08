@@ -6,6 +6,10 @@
   },
   "exclude": [
     "test.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+  ],
+  "include": [
+    // "../node_modules/skywalking-client-js/**/*",
+    "../src/*",
   ]
 }

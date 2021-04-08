@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ErrorHandler } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Formio, FormioModule, FormioAppConfig } from '@formio/angular';
@@ -9,6 +10,7 @@ import { FormioGrid } from '@formio/angular/grid';
 import { FormioAuthService, FormioAuthConfig } from '@formio/angular/auth';
 import { FormioResources } from '@formio/angular/resource';
 import { PrismService } from './Prism.service';
+import { AppGlobalErrorhandler } from './app.errorhandler.service';
 
 import { AppConfig } from './config';
 import { AppComponent } from './app.component';
@@ -73,7 +75,8 @@ import { DataComponent } from './data/data.component';
       register: {
         form: 'user/register'
       }
-    }}
+    }},
+    {provide: ErrorHandler, useClass: AppGlobalErrorhandler}
   ],
   bootstrap: [AppComponent]
 })
